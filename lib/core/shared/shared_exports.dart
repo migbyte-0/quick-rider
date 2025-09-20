@@ -1,14 +1,9 @@
-export '../shared/widgets/views_background.dart';
 export '../shared/widgets/gradient_container.dart';
 export '../shared/widgets/outline_gradient_button.dart';
 export '../shared/widgets/elevated_button.dart';
 export '../shared/widgets/custom_text_field.dart';
-export '../shared/widgets/picture_upload.dart';
 export '../shared/widgets/content_card_widget.dart';
 export '../shared/widgets/custom_background.dart';
-export '../shared/widgets/custom_bottom_sheet.dart';
-export '../shared/widgets/bottom_navigation_bar.dart';
 export '../shared/widgets/app_logo.dart';
 export '../shared/widgets/app_loader.dart';
 export '../shared/widgets/app_input.dart';
-export '../shared/widgets/app_button.dart';

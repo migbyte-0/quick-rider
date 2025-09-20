@@ -1,27 +1,29 @@
-part of 'auth_cubit.dart';
+import 'package:equatable/equatable.dart';
 
-enum AuthStatus { initial, updated }
+import '../../domain/entities/user_entites.dart';
 
-class AuthState extends Equatable {
-  const AuthState({
-    this.status = AuthStatus.initial,
-    this.message = '',
-  });
-
-  final AuthStatus status;
-  final String message;
-
+abstract class AuthState extends Equatable {
+  const AuthState();
   @override
-  List<Object> get props => [status, message];
+  List<Object> get props => [];
 }
 
 class AuthInitial extends AuthState {}
 
-class AuthUpdated extends AuthState {
+class AuthLoading extends AuthState {}
+
+class AuthCodeSentSuccess extends AuthState {}
+
+class AuthLoggedInSuccess extends AuthState {
+  final User user;
+  const AuthLoggedInSuccess(this.user);
+  @override
+  List<Object> get props => [user];
+}
+
+class AuthError extends AuthState {
   final String message;
-
-  AuthUpdated(this.message) : super(status: AuthStatus.updated, message: message);
-
+  const AuthError(this.message);
   @override
   List<Object> get props => [message];
 }
