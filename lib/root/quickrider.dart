@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quickrider/l10n/app_localizations.dart';
 
-class Discounta extends StatelessWidget {
+import '../core/constants/constant_exports.dart';
+
+class QuickRider extends StatelessWidget {
   final String initialRoute;
 
-  const Discounta({required this.initialRoute, super.key});
+  const QuickRider({required this.initialRoute, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +21,7 @@ class Discounta extends StatelessWidget {
         builder: (_, __) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Discounta',
+            title: 'QuickRider',
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
             theme: ThemeData(

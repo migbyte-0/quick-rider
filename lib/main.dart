@@ -1,23 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:quickrider/root/quickrider.dart';
+
+import 'core/services/secure_storage.dart';
+import 'services/onboarding_services.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await di.init();
-  await di.sl.isReady<OnboardingService>();
+  await di.init(); // Initialize your dependencies
 
-  final onboardingService = di.sl<OnboardingService>();
-  final secureStorage = di.sl<SecureStorage>();
-
-  String initialRoute = '/'; // Default to SplashScreen for logged-in users
-
-  final bool hasOnboarded = onboardingService.hasCompletedOnboarding();
-  final bool isLoggedIn = await secureStorage.getTokens() != null;
-
-  if (!hasOnboarded) {
-    initialRoute = '/onboarding';
-  } else if (!isLoggedIn) {
-    initialRoute = '/login';
-  }
-
-  runApp(QuickRider(initialRoute: initialRoute));
+  runApp(const QuickRider(initialRoute: '/'));
 }
