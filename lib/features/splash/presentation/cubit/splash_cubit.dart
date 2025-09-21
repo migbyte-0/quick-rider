@@ -2,8 +2,7 @@ import 'package:bloc/bloc.dart';
 
 import '../../../../core/services/secure_storage.dart';
 import '../../../../services/onboarding_services.dart';
-
-part 'splash_state.dart';
+import 'splash_state.dart';
 
 class SplashCubit extends Cubit<SplashState> {
   final OnboardingService _onboardingService;

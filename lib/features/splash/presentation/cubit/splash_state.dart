@@ -1,5 +1,3 @@
-part of 'splash_cubit.dart';
-
 import 'package:equatable/equatable.dart';
 
 abstract class SplashState extends Equatable {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../features/auth/presentation/screens/auth_screens.dart';
 import '../../../l10n/app_localizations.dart';
 
 class NavBar extends StatefulWidget {
@@ -12,10 +13,10 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
-    Rides(),
-    ProfileScreen(),
+  static final List<Widget> _widgetOptions = <Widget>[
+    AuthScreen(),
+    AuthScreen(),
+    AuthScreen(),
   ];
 
   void _onItemTapped(int index) {

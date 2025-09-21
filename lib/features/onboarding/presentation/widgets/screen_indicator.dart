@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../core/constants/constant_exports.dart';
-import 'onboarding_model.dart';
+import '../../../../core/constants/app_colors.dart';
+import '../../data/model/onboarding_model.dart';
 
 class ScreenIndicator extends StatelessWidget {
   const ScreenIndicator({

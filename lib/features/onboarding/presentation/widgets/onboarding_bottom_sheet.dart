@@ -1,9 +1,10 @@
-import 'package:discounta/init/start/screen_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../core/constants/constant_exports.dart';
-import '../../core/shared/widgets/elevated_button.dart';
-import 'onboarding_model.dart';
+import '../../../../core/constants/app_text_style.dart';
+import '../../../../core/shared/widgets/elevated_button.dart';
+import '../../../../l10n/app_localizations.dart';
+import '../../data/model/onboarding_model.dart';
+import 'screen_indicator.dart';
 
 class OnboardingBottomSheet extends StatelessWidget {
   const OnboardingBottomSheet({
@@ -24,6 +25,7 @@ class OnboardingBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isLastPage = _currentPage == _contents.length - 1;
+    final l10n = AppLocalizations.of(context)!;
 
     return Material(
       color: Colors.transparent,
@@ -53,8 +55,8 @@ class OnboardingBottomSheet extends StatelessWidget {
             SizedBox(height: 20.h),
             ScreenIndicator(contents: _contents, currentPage: _currentPage),
             SizedBox(height: 20.h),
-            GradientButton(
-              text: isLastPage ? AppStrings.start : AppStrings.next,
+            CustomButton(
+              text: isLastPage ? l10n.start : l10n.next,
               onPressed: () {
                 if (!isLastPage) {
                   _pageController.nextPage(

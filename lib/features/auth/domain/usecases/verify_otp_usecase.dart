@@ -7,7 +7,10 @@ class VerifyOtp {
   final AuthRepository repository;
   VerifyOtp(this.repository);
 
-  Future<Either<Failure, User>> call({required String otp}) async {
-    return await repository.verifyOtp(otp: otp);
+  Future<Either<Failure, UserEntity>> call({
+    required String verificationId,
+    required String otp,
+  }) async {
+    return await repository.verifyOtp(verificationId: verificationId, otp: otp);
   }
 }

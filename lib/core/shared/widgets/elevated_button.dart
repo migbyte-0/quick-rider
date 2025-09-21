@@ -2,39 +2,37 @@ import 'package:flutter/material.dart';
 import '../../constants/constant_exports.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class GradientButton extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final String text;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
+  final bool isLoading;
 
-  const GradientButton({
+  const CustomButton({
     super.key,
     required this.text,
     required this.onPressed,
+    this.isLoading = false,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 50.h,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.r),
-        gradient: const LinearGradient(
-          colors: [AppColors.primary, AppColors.secondary],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-      ),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.transparent,
+          backgroundColor: AppColors.primary,
           shadowColor: Colors.transparent,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.r),
           ),
         ),
-        onPressed: onPressed,
-        child: Text(text, style: AppTextStyles.gradientText),
+        onPressed: isLoading ? null : onPressed,
+        child: isLoading
+            ? const CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+              )
+            : Text(text, style: AppTextStyles.gradientText),
       ),
     );
   }

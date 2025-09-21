@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../../features/auth/presentation/screens/auth_screens.dart';
+import '../../features/onboarding/presentation/sceens/onboarding_screen.dart';
 import '../../features/splash/presentation/screens/splash_screen.dart';
-import '../../root/init/onboarding_screen.dart';
 import '../shared/widgets/custom_navbar.dart';
 
 class AppRouter {

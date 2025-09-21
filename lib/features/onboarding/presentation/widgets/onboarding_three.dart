@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/constants/constant_exports.dart';
+import '../../../../core/constants/app_assets.dart';
 
-class OnboardingOne extends StatelessWidget {
-  const OnboardingOne({super.key});
+class OnboardingThree extends StatelessWidget {
+  const OnboardingThree({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      AppAssets.onBoardingOneBackground,
+      AppAssets.onBoardingThreeBackground,
       width: double.infinity,
       height: double.infinity,
       fit: BoxFit.cover,

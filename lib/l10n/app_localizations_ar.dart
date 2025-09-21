@@ -9,7 +9,7 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get appName => 'Mawjood';
+  String get appName => 'كويك رايدر';
 
   @override
   String get next => 'التالي';
@@ -27,10 +27,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get submit => 'إرسال';
 
   @override
-  String get confirm => 'تاكيد';
+  String get confirm => 'تأكيد';
 
   @override
-  String get upload => 'إرفاق';
+  String get upload => 'رفع';
 
   @override
   String get edit => 'تعديل';
@@ -42,26 +42,26 @@ class AppLocalizationsAr extends AppLocalizations {
   String get remove => 'إزالة';
 
   @override
-  String get done => 'إنهاء';
+  String get done => 'تم';
 
   @override
-  String get profile => ' الحساب';
+  String get profile => 'الملف الشخصي';
 
   @override
   String get goOn => 'متابعة';
 
   @override
-  String get welcome => 'اهلا وسهلا';
+  String get welcome => 'أهلاً بك في كويك رايدر';
 
   @override
-  String get slogan => 'تسوق بذكاء... وفر أكثر';
+  String get slogan => 'رحلتك، عند الطلب.';
 
   @override
-  String get confirmPhoneNumber => 'تأكيد رقم الجوال';
+  String get confirmPhoneNumber => 'تأكيد رقم الهاتف';
 
   @override
   String get otpMessage =>
-      'قد أرسلنا رمز تحقق مكوّن من 5 أرقام إلى رقم الجوال الخاص بك ';
+      'لقد أرسلنا رمز تحقق مكون من 6 أرقام إلى رقم هاتفك المحمول.';
 
   @override
   String get shareApp => 'مشاركة التطبيق';
@@ -73,83 +73,90 @@ class AppLocalizationsAr extends AppLocalizations {
   String get contactUs => 'تواصل معنا';
 
   @override
-  String get aboutApp => 'عن التطبيق';
+  String get aboutApp => 'عن كويك رايدر';
 
   @override
-  String get myRides => 'My Rides';
+  String get myRides => 'رحلاتي';
 
   @override
-  String get privacyPolicy => 'سياسة الاستخدام والخصوصية';
+  String get privacyPolicy => 'سياسة الخصوصية والاستخدام';
 
   @override
-  String get settings => 'الإعدادات ';
+  String get settings => 'الإعدادات';
 
   @override
-  String get socialMediaFolow => 'تابعنا على مواقع التواصل الإجتماعي';
+  String get socialMediaFolow => 'تابعنا على وسائل التواصل الاجتماعي';
 
   @override
   String get privacyPolicyHeader =>
-      'نحن في تطبيق ديسكونتا نحرص على حماية خصوصية مستخدمينا ونلتزم بتطبيق الأنظمة واللوائح المعمول بها في المملكة العربية السعودية، بما في ذلك نظام حماية البيانات الشخصية. باستخدامك للتطبيق فإنك توافق على الشروط الموضحة أدناه.';
+      'في كويك رايدر، نلتزم بحماية خصوصية مستخدمينا بما يتوافق مع أنظمة المملكة العربية السعودية. باستخدام تطبيقنا، فإنك توافق على الشروط الموضحة أدناه.';
 
   @override
-  String get onBoardingTitleOne => 'خصومات في كل مكان';
+  String get onBoardingTitleOne => 'اطلب رحلة في ثوانٍ';
 
   @override
-  String get onBoardingDescriptionOne => 'اكتشف أفضل العروض من متاجر قريبة منك';
+  String get onBoardingDescriptionOne => 'اضغط على زر وسيتجه سائق إليك.';
 
   @override
-  String get onBoardingTitleTwo => 'قارن ووفّر';
+  String get onBoardingTitleTwo => 'تتبع سائقك';
 
   @override
   String get onBoardingDescriptionTwo =>
-      'شوف الأسعار بعد الخصم ووفّر في مشترياتك';
+      'شاهد موقع سائقك في الوقت الفعلي على الخريطة.';
 
   @override
-  String get onBoardingTitleThree => 'اكسب نقاط';
+  String get onBoardingTitleThree => 'وصل بأمان';
 
   @override
   String get onBoardingDescriptionThree =>
-      'كل ما تشتري تجمع نقاط وتستفيد منها لاحقاً';
+      'استرخِ واستمتع برحلة سريعة وموثوقة إلى وجهتك.';
+
+  @override
+  String get arriveSafelySaveSmartlyTitle => 'وصل بأمان، ووفر بذكاء';
+
+  @override
+  String get arriveSafelySaveSmartlyDescription =>
+      'استمتع براحة البال في كل رحلة مع أسعار شفافة لا ترهق محفظتك.';
 
   @override
   String get homeScreenTitle => 'الرئيسية';
 
   @override
-  String get profileScreenTitle => 'الحساب';
+  String get profileScreenTitle => 'الملف الشخصي';
 
   @override
-  String get userName => 'اسم المستخدم';
+  String get userName => 'الاسم كاملاً';
 
   @override
   String get phoneNumber => 'رقم الهاتف';
 
   @override
-  String get otp => 'رمز التفعيل';
+  String get otp => 'رمز التحقق';
 
   @override
-  String get deleteAccount => 'مسح الحساب';
+  String get deleteAccount => 'حذف الحساب';
 
   @override
   String get notificationsScreenTitle => 'الإشعارات';
 
   @override
-  String get noNotifications => 'لا توجد إشعارات';
+  String get noNotifications => 'لا توجد إشعارات جديدة';
 
   @override
-  String get uploadImageDialogTitle => 'إرفاق صورة';
+  String get uploadImageDialogTitle => 'رفع صورة الملف الشخصي';
 
   @override
   String get uploadFromCamera => 'الكاميرا';
 
   @override
-  String get uploadFromGallery => 'الاستوديو';
+  String get uploadFromGallery => 'المعرض';
 
   @override
-  String get accountCreated => 'تهانينا! تم إنشاء حسابك بنجاح';
+  String get accountCreated => 'تهانينا! حسابك جاهز.';
 
   @override
   String get accountCreatedSub =>
-      'يمكنك الان إضافة عرضك بسهولة .. وتجميع النقاط للحصول علي مساحة مجانية .';
+      'أنت جاهز الآن لطلب رحلتك الأولى مع كويك رايدر.';
 
   @override
   String get city => 'المدينة';
@@ -158,38 +165,37 @@ class AppLocalizationsAr extends AppLocalizations {
   String get language => 'اللغة';
 
   @override
-  String get fave => 'المفضلة';
+  String get fave => 'الأماكن المحفوظة';
 
   @override
-  String get rideHistory => 'Ride History';
+  String get rideHistory => 'سجل الرحلات';
 
   @override
   String get close => 'إغلاق';
 
   @override
-  String get requestRide => 'Request a Ride';
+  String get requestRide => 'طلب رحلة';
 
   @override
   String get errorOccurred => 'حدث خطأ ما';
 
   @override
-  String get uploadFailed => 'فشل في الرفع';
+  String get uploadFailed => 'فشل الرفع';
 
   @override
-  String get operationFailed => 'The operation could not be completed.';
+  String get operationFailed => 'تعذر إكمال العملية.';
 
   @override
-  String get congrats => '!مبروك';
+  String get congrats => 'تهانينا!';
 
   @override
-  String get rideConfirmed =>
-      'Your ride is confirmed and your driver is on the way!';
+  String get rideConfirmed => 'رحلتك مؤكدة وسائقك في الطريق!';
 
   @override
   String get enterName => 'أدخل اسمك';
 
   @override
-  String get phoneNumberValidation => 'أدخل رقم هاتف صالحًا يبدأ بـ 5';
+  String get phoneNumberValidation => 'أدخل رقم هاتف صحيح يبدأ بـ 5';
 
   @override
   String get enterPhoneNumber => 'أدخل رقم الهاتف';
@@ -201,5 +207,35 @@ class AppLocalizationsAr extends AppLocalizations {
   String get account => 'الحساب';
 
   @override
-  String get driveWithUs => 'Drive with us';
+  String get driveWithUs => 'قد معنا';
+
+  @override
+  String get phoneHintText => 'رقم الهاتف (مثال: 5xxxxxxxx)';
+
+  @override
+  String get otpHintText => 'رمز التحقق (المحاكاة: 123456)';
+
+  @override
+  String get sendCodeButton => 'إرسال الرمز';
+
+  @override
+  String get verifySignInButton => 'تحقق وتسجيل الدخول';
+
+  @override
+  String get verifyingMessage => 'جاري التحقق...';
+
+  @override
+  String get resend => 'إعادة الإرسال';
+
+  @override
+  String get resendCodeButton => 'إعادة إرسال الرمز';
+
+  @override
+  String get didNotReceiveCode => 'ألم تستلم الرمز؟';
+
+  @override
+  String get requestNewCode => 'طلب رمز جديد';
+
+  @override
+  String get resendAgainButton => 'إعادة الإرسال مرة أخرى';
 }

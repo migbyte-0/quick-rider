@@ -49,10 +49,10 @@ class _GradientContainerState extends State<GradientContainer>
 
   List<Color> _animatedColors(double value) {
     return [
-      Color.lerp(AppColors.gradientDark, AppColors.gradientBlue, value)!,
-      Color.lerp(AppColors.gradientBlue, AppColors.gradientPurple, value)!,
-      Color.lerp(AppColors.gradientPurple, AppColors.gradientPink, value)!,
-      Color.lerp(AppColors.gradientPink, AppColors.gradientDark, value)!,
+      Color.lerp(AppColors.secondary, AppColors.primary, value)!,
+      Color.lerp(AppColors.secondary, AppColors.primary, value)!,
+      Color.lerp(AppColors.primary, AppColors.secondary, value)!,
+      Color.lerp(AppColors.primary, AppColors.secondary, value)!,
     ];
   }
 

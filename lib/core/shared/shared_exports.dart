@@ -7,3 +7,4 @@ export '../shared/widgets/custom_background.dart';
 export '../shared/widgets/app_logo.dart';
 export '../shared/widgets/app_loader.dart';
 export '../shared/widgets/app_input.dart';
+export '../shared/widgets/app_loading.dart';

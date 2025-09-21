@@ -61,7 +61,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get otpMessage =>
-      'We\'ve sent a 5-digit verification code to your mobile number.';
+      'We\'ve sent a 6-digit verification code to your mobile number for verification.';
 
   @override
   String get shareApp => 'Share App';
@@ -111,6 +111,13 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get onBoardingDescriptionThree =>
       'Relax and enjoy a quick and reliable ride to your destination.';
+
+  @override
+  String get arriveSafelySaveSmartlyTitle => 'Arrive Safely, Save Smartly';
+
+  @override
+  String get arriveSafelySaveSmartlyDescription =>
+      'Enjoy peace of mind on every trip with transparent fares that are easy on your wallet.';
 
   @override
   String get homeScreenTitle => 'Home';
@@ -204,4 +211,34 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get driveWithUs => 'Drive with us';
+
+  @override
+  String get phoneHintText => 'Phone Number (e.g., 5xxxxxxxx)';
+
+  @override
+  String get otpHintText => 'Verification Code (Mock is 123456)';
+
+  @override
+  String get sendCodeButton => 'Send Code';
+
+  @override
+  String get verifySignInButton => 'Verify & Sign In';
+
+  @override
+  String get verifyingMessage => 'Verifying...';
+
+  @override
+  String get resend => 'Resend';
+
+  @override
+  String get resendCodeButton => 'Resend Code';
+
+  @override
+  String get didNotReceiveCode => 'Didn\'t receive any code?';
+
+  @override
+  String get requestNewCode => 'Request a new code';
+
+  @override
+  String get resendAgainButton => 'Resend Again';
 }

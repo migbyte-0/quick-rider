@@ -203,7 +203,7 @@ abstract class AppLocalizations {
   /// No description provided for @otpMessage.
   ///
   /// In en, this message translates to:
-  /// **'We\'ve sent a 5-digit verification code to your mobile number.'**
+  /// **'We\'ve sent a 6-digit verification code to your mobile number for verification.'**
   String get otpMessage;
 
   /// No description provided for @shareApp.
@@ -260,41 +260,53 @@ abstract class AppLocalizations {
   /// **'At QuickRider, we are committed to protecting our users\' privacy in compliance with the regulations of the Kingdom of Saudi Arabia. By using our app, you agree to the terms outlined below.'**
   String get privacyPolicyHeader;
 
-  /// No description provided for @onBoardingTitleOne.
+  /// First onboarding title
   ///
   /// In en, this message translates to:
   /// **'Request a Ride in Seconds'**
   String get onBoardingTitleOne;
 
-  /// No description provided for @onBoardingDescriptionOne.
+  /// First onboarding description
   ///
   /// In en, this message translates to:
   /// **'Tap a button and get a driver heading your way.'**
   String get onBoardingDescriptionOne;
 
-  /// No description provided for @onBoardingTitleTwo.
+  /// Second onboarding title
   ///
   /// In en, this message translates to:
   /// **'Track Your Driver'**
   String get onBoardingTitleTwo;
 
-  /// No description provided for @onBoardingDescriptionTwo.
+  /// Second onboarding description
   ///
   /// In en, this message translates to:
   /// **'Watch your driver\'s location in real-time on the map.'**
   String get onBoardingDescriptionTwo;
 
-  /// No description provided for @onBoardingTitleThree.
+  /// Third onboarding title
   ///
   /// In en, this message translates to:
   /// **'Arrive Safely'**
   String get onBoardingTitleThree;
 
-  /// No description provided for @onBoardingDescriptionThree.
+  /// Third onboarding description
   ///
   /// In en, this message translates to:
   /// **'Relax and enjoy a quick and reliable ride to your destination.'**
   String get onBoardingDescriptionThree;
+
+  /// A global title for safety and savings
+  ///
+  /// In en, this message translates to:
+  /// **'Arrive Safely, Save Smartly'**
+  String get arriveSafelySaveSmartlyTitle;
+
+  /// A global description for safety and savings
+  ///
+  /// In en, this message translates to:
+  /// **'Enjoy peace of mind on every trip with transparent fares that are easy on your wallet.'**
+  String get arriveSafelySaveSmartlyDescription;
 
   /// No description provided for @homeScreenTitle.
   ///
@@ -475,6 +487,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Drive with us'**
   String get driveWithUs;
+
+  /// Hint text for phone number input
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Number (e.g., 5xxxxxxxx)'**
+  String get phoneHintText;
+
+  /// Hint text for OTP input
+  ///
+  /// In en, this message translates to:
+  /// **'Verification Code (Mock is 123456)'**
+  String get otpHintText;
+
+  /// Text for the 'Send Code' button
+  ///
+  /// In en, this message translates to:
+  /// **'Send Code'**
+  String get sendCodeButton;
+
+  /// Text for the 'Verify & Sign In' button
+  ///
+  /// In en, this message translates to:
+  /// **'Verify & Sign In'**
+  String get verifySignInButton;
+
+  /// Text for 'Verifying...' during OTP submission
+  ///
+  /// In en, this message translates to:
+  /// **'Verifying...'**
+  String get verifyingMessage;
+
+  /// Prefix for resend timer
+  ///
+  /// In en, this message translates to:
+  /// **'Resend'**
+  String get resend;
+
+  /// Text for the 'Resend Code' button
+  ///
+  /// In en, this message translates to:
+  /// **'Resend Code'**
+  String get resendCodeButton;
+
+  /// Text for 'Didn't receive any code?' prompt
+  ///
+  /// In en, this message translates to:
+  /// **'Didn\'t receive any code?'**
+  String get didNotReceiveCode;
+
+  /// Text for 'Request a new code' in timer
+  ///
+  /// In en, this message translates to:
+  /// **'Request a new code'**
+  String get requestNewCode;
+
+  /// No description provided for @resendAgainButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend Again'**
+  String get resendAgainButton;
 }
 
 class _AppLocalizationsDelegate

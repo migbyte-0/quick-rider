@@ -10,12 +10,26 @@ abstract class AuthState extends Equatable {
 
 class AuthInitial extends AuthState {}
 
-class AuthLoading extends AuthState {}
+class AuthLoading extends AuthState {
+  final bool isSendingOtp;
+  const AuthLoading({this.isSendingOtp = true});
 
-class AuthCodeSentSuccess extends AuthState {}
+  @override
+  List<Object> get props => [isSendingOtp];
+}
+
+class AuthCodeSentSuccess extends AuthState {
+  final String verificationId;
+  final int? resendToken;
+
+  const AuthCodeSentSuccess({required this.verificationId, this.resendToken});
+
+  @override
+  List<Object> get props => [verificationId, resendToken ?? 0];
+}
 
 class AuthLoggedInSuccess extends AuthState {
-  final User user;
+  final UserEntity user;
   const AuthLoggedInSuccess(this.user);
   @override
   List<Object> get props => [user];

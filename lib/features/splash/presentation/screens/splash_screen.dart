@@ -5,6 +5,7 @@ import 'package:quickrider/core/shared/shared_exports.dart';
 
 import '../../../../core/constants/app_assets.dart' show AppAssets;
 import '../cubit/splash_cubit.dart';
+import '../cubit/splash_state.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -53,11 +54,25 @@ class _SplashScreenState extends State<SplashScreen>
       },
       child: Scaffold(
         body: GradientContainer(
-          child: Center(
-            child: FadeTransition(
-              opacity: _fadeAnimation,
-              child: SvgPicture.asset(AppAssets.logo),
-            ),
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: SvgPicture.asset(
+                  AppAssets.decor,
+                  width: MediaQuery.of(context).size.width,
+                  fit: BoxFit.cover,
+                ),
+              ),
+
+              Center(
+                child: FadeTransition(
+                  opacity: _fadeAnimation,
+                  child: SvgPicture.asset(AppAssets.coloredLogo),
+                ),
+              ),
+            ],
           ),
         ),
       ),
