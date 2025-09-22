@@ -79,9 +79,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get myRides => 'رحلاتي';
 
   @override
-  String get privacyPolicy => 'سياسة الخصوصية والاستخدام';
-
-  @override
   String get settings => 'الإعدادات';
 
   @override
@@ -90,6 +87,33 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get privacyPolicyHeader =>
       'في كويك رايدر، نلتزم بحماية خصوصية مستخدمينا بما يتوافق مع أنظمة المملكة العربية السعودية. باستخدام تطبيقنا، فإنك توافق على الشروط الموضحة أدناه.';
+
+  @override
+  String get profileScreenTitle => 'الملف الشخصي';
+
+  @override
+  String get paymentMethods => 'طرق الدفع';
+
+  @override
+  String get rideHistory => 'سجل الرحلات';
+
+  @override
+  String get language => 'اللغة';
+
+  @override
+  String get helpSupport => 'المساعدة والدعم';
+
+  @override
+  String get faq => 'الأسئلة الشائعة';
+
+  @override
+  String get privacyPolicy => 'سياسة الخصوصية';
+
+  @override
+  String get logout => 'تسجيل الخروج';
+
+  @override
+  String get noNotifications => 'الإشعارات';
 
   @override
   String get onBoardingTitleOne => 'اطلب رحلة في ثوانٍ';
@@ -122,9 +146,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get homeScreenTitle => 'الرئيسية';
 
   @override
-  String get profileScreenTitle => 'الملف الشخصي';
-
-  @override
   String get userName => 'الاسم كاملاً';
 
   @override
@@ -138,9 +159,6 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get notificationsScreenTitle => 'الإشعارات';
-
-  @override
-  String get noNotifications => 'لا توجد إشعارات جديدة';
 
   @override
   String get uploadImageDialogTitle => 'رفع صورة الملف الشخصي';
@@ -162,13 +180,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get city => 'المدينة';
 
   @override
-  String get language => 'اللغة';
-
-  @override
   String get fave => 'الأماكن المحفوظة';
-
-  @override
-  String get rideHistory => 'سجل الرحلات';
 
   @override
   String get close => 'إغلاق';

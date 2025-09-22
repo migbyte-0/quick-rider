@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quickrider/core/di/di.dart';
+import 'package:quickrider/features/profile/presentation/presentation_exports.dart';
 import 'package:quickrider/l10n/app_localizations.dart';
 import '../core/constants/constant_exports.dart';
 import '../features/auth/presentation/cubits/auth_cubit.dart';
@@ -20,6 +21,8 @@ class QuickRider extends StatelessWidget {
         BlocProvider<AuthCubit>(create: (_) => sl<AuthCubit>()),
         BlocProvider<OnboardingCubit>(create: (_) => sl<OnboardingCubit>()),
         BlocProvider<SplashCubit>(create: (_) => sl<SplashCubit>()),
+        BlocProvider<ProfileSetupCubit>(create: (_) => sl<ProfileSetupCubit>()),
+        BlocProvider<ProfileCubit>(create: (_) => sl<ProfileCubit>()),
       ],
       child: ScreenUtilInit(
         designSize: const Size(375, 812),

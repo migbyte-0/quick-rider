@@ -236,12 +236,6 @@ abstract class AppLocalizations {
   /// **'My Rides'**
   String get myRides;
 
-  /// No description provided for @privacyPolicy.
-  ///
-  /// In en, this message translates to:
-  /// **'Privacy and Usage Policy'**
-  String get privacyPolicy;
-
   /// No description provided for @settings.
   ///
   /// In en, this message translates to:
@@ -259,6 +253,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'At QuickRider, we are committed to protecting our users\' privacy in compliance with the regulations of the Kingdom of Saudi Arabia. By using our app, you agree to the terms outlined below.'**
   String get privacyPolicyHeader;
+
+  /// No description provided for @profileScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profileScreenTitle;
+
+  /// No description provided for @paymentMethods.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment Methods'**
+  String get paymentMethods;
+
+  /// No description provided for @rideHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Ride History'**
+  String get rideHistory;
+
+  /// No description provided for @language.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get language;
+
+  /// No description provided for @helpSupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Help & Support'**
+  String get helpSupport;
+
+  /// No description provided for @faq.
+  ///
+  /// In en, this message translates to:
+  /// **'FAQ'**
+  String get faq;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get privacyPolicy;
+
+  /// No description provided for @logout.
+  ///
+  /// In en, this message translates to:
+  /// **'Log Out'**
+  String get logout;
+
+  /// No description provided for @noNotifications.
+  ///
+  /// In en, this message translates to:
+  /// **'No new notifications'**
+  String get noNotifications;
 
   /// First onboarding title
   ///
@@ -314,12 +362,6 @@ abstract class AppLocalizations {
   /// **'Home'**
   String get homeScreenTitle;
 
-  /// No description provided for @profileScreenTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Profile'**
-  String get profileScreenTitle;
-
   /// No description provided for @userName.
   ///
   /// In en, this message translates to:
@@ -349,12 +391,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Notifications'**
   String get notificationsScreenTitle;
-
-  /// No description provided for @noNotifications.
-  ///
-  /// In en, this message translates to:
-  /// **'No new notifications'**
-  String get noNotifications;
 
   /// No description provided for @uploadImageDialogTitle.
   ///
@@ -392,23 +428,11 @@ abstract class AppLocalizations {
   /// **'City'**
   String get city;
 
-  /// No description provided for @language.
-  ///
-  /// In en, this message translates to:
-  /// **'Language'**
-  String get language;
-
   /// No description provided for @fave.
   ///
   /// In en, this message translates to:
   /// **'Saved Places'**
   String get fave;
-
-  /// No description provided for @rideHistory.
-  ///
-  /// In en, this message translates to:
-  /// **'Ride History'**
-  String get rideHistory;
 
   /// No description provided for @close.
   ///

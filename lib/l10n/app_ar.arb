@@ -1,133 +1,133 @@
 {
-    "@@locale": "ar",
-    "appName": "كويك رايدر",
-    "next": "التالي",
-    "start": "ابدأ الآن",
-    "ok": "موافق",
-    "cancel": "إلغاء",
-    "submit": "إرسال",
-    "confirm": "تأكيد",
-    "upload": "رفع",
-    "edit": "تعديل",
-    "report": "إبلاغ",
-    "remove": "إزالة",
-    "done": "تم",
-    "profile": "الملف الشخصي",
-    "goOn": "متابعة",
-    "welcome": "أهلاً بك في كويك رايدر",
-    "slogan": "رحلتك، عند الطلب.",
-    "confirmPhoneNumber": "تأكيد رقم الهاتف",
-    "otpMessage": "لقد أرسلنا رمز تحقق مكون من 6 أرقام إلى رقم هاتفك المحمول.",
-    "shareApp": "مشاركة التطبيق",
-    "rateApp": "تقييم التطبيق",
-    "contactUs": "تواصل معنا",
-    "aboutApp": "عن كويك رايدر",
-    "myRides": "رحلاتي",
-    "privacyPolicy": "سياسة الخصوصية والاستخدام",
-    "settings": "الإعدادات",
-    "socialMediaFolow": "تابعنا على وسائل التواصل الاجتماعي",
-    "privacyPolicyHeader": "في كويك رايدر، نلتزم بحماية خصوصية مستخدمينا بما يتوافق مع أنظمة المملكة العربية السعودية. باستخدام تطبيقنا، فإنك توافق على الشروط الموضحة أدناه.",
-    
-    "onBoardingTitleOne": "اطلب رحلة في ثوانٍ",
-    "@onBoardingTitleOne": {
-        "description": "First onboarding title"
-    },
-    "onBoardingDescriptionOne": "اضغط على زر وسيتجه سائق إليك.",
-    "@onBoardingDescriptionOne": {
-        "description": "First onboarding description"
-    },
-    "onBoardingTitleTwo": "تتبع سائقك",
-    "@onBoardingTitleTwo": {
-        "description": "Second onboarding title"
-    },
-    "onBoardingDescriptionTwo": "شاهد موقع سائقك في الوقت الفعلي على الخريطة.",
-    "@onBoardingDescriptionTwo": {
-        "description": "Second onboarding description"
-    },
-    "onBoardingTitleThree": "وصل بأمان",
-    "@onBoardingTitleThree": {
-        "description": "Third onboarding title"
-    },
-    "onBoardingDescriptionThree": "استرخِ واستمتع برحلة سريعة وموثوقة إلى وجهتك.",
-    "@onBoardingDescriptionThree": {
-        "description": "Third onboarding description"
-    },
-
-    "arriveSafelySaveSmartlyTitle": "وصل بأمان، ووفر بذكاء",
-    "@arriveSafelySaveSmartlyTitle": {
-        "description": "A global title for safety and savings"
-    },
-    "arriveSafelySaveSmartlyDescription": "استمتع براحة البال في كل رحلة مع أسعار شفافة لا ترهق محفظتك.",
-    "@arriveSafelySaveSmartlyDescription": {
-        "description": "A global description for safety and savings"
-    },
-
-    "homeScreenTitle": "الرئيسية",
-    "profileScreenTitle": "الملف الشخصي",
-    "userName": "الاسم كاملاً",
-    "phoneNumber": "رقم الهاتف",
-    "otp": "رمز التحقق",
-    "deleteAccount": "حذف الحساب",
-    "notificationsScreenTitle": "الإشعارات",
-    "noNotifications": "لا توجد إشعارات جديدة",
-    "uploadImageDialogTitle": "رفع صورة الملف الشخصي",
-    "uploadFromCamera": "الكاميرا",
-    "uploadFromGallery": "المعرض",
-    "accountCreated": "تهانينا! حسابك جاهز.",
-    "accountCreatedSub": "أنت جاهز الآن لطلب رحلتك الأولى مع كويك رايدر.",
-    "city": "المدينة",
-    "language": "اللغة",
-    "fave": "الأماكن المحفوظة",
-    "rideHistory": "سجل الرحلات",
-    "close": "إغلاق",
-    "requestRide": "طلب رحلة",
-    "errorOccurred": "حدث خطأ ما",
-    "uploadFailed": "فشل الرفع",
-    "operationFailed": "تعذر إكمال العملية.",
-    "congrats": "تهانينا!",
-    "rideConfirmed": "رحلتك مؤكدة وسائقك في الطريق!",
-    "enterName": "أدخل اسمك",
-    "phoneNumberValidation": "أدخل رقم هاتف صحيح يبدأ بـ 5",
-    "enterPhoneNumber": "أدخل رقم الهاتف",
-    "home": "الرئيسية",
-    "account": "الحساب",
-    "driveWithUs": "قد معنا",
-
-    "phoneHintText": "رقم الهاتف (مثال: 5xxxxxxxx)",
-    "@phoneHintText": {
-        "description": "Hint text for phone number input"
-    },
-    "otpHintText": "رمز التحقق (المحاكاة: 123456)",
-    "@otpHintText": {
-        "description": "Hint text for OTP input"
-    },
-    "sendCodeButton": "إرسال الرمز",
-    "@sendCodeButton": {
-        "description": "Text for the 'Send Code' button"
-    },
-    "verifySignInButton": "تحقق وتسجيل الدخول",
-    "@verifySignInButton": {
-        "description": "Text for the 'Verify & Sign In' button"
-    },
-    "verifyingMessage": "جاري التحقق...",
-    "@verifyingMessage": {
-        "description": "Text for 'Verifying...' during OTP submission"
-    },
-    "resend": "إعادة الإرسال",
-    "@resend": {
-        "description": "Text for 'Resend' action"
-    },
-    "resendCodeButton": "إعادة إرسال الرمز",
-    "@resendCodeButton": {
-        "description": "Text for the 'Resend Code' button"
-    },
-    "didNotReceiveCode": "ألم تستلم الرمز؟",
-    "@didNotReceiveCode": {
-        "description": "Text for 'Didn't receive any code?' prompt"
-    },
-    "requestNewCode": "طلب رمز جديد",
-    "@requestNewCode": {
-        "description": "Text for 'Request a new code' in timer"
-    },
-    "resendAgainButton": "إعادة الإرسال مرة أخرى"
+  "@@locale": "ar",
+  "appName": "كويك رايدر",
+  "next": "التالي",
+  "start": "ابدأ الآن",
+  "ok": "موافق",
+  "cancel": "إلغاء",
+  "submit": "إرسال",
+  "confirm": "تأكيد",
+  "upload": "رفع",
+  "edit": "تعديل",
+  "report": "إبلاغ",
+  "remove": "إزالة",
+  "done": "تم",
+  "profile": "الملف الشخصي",
+  "goOn": "متابعة",
+  "welcome": "أهلاً بك في كويك رايدر",
+  "slogan": "رحلتك، عند الطلب.",
+  "confirmPhoneNumber": "تأكيد رقم الهاتف",
+  "otpMessage": "لقد أرسلنا رمز تحقق مكون من 6 أرقام إلى رقم هاتفك المحمول.",
+  "shareApp": "مشاركة التطبيق",
+  "rateApp": "تقييم التطبيق",
+  "contactUs": "تواصل معنا",
+  "aboutApp": "عن كويك رايدر",
+  "myRides": "رحلاتي",
+  "settings": "الإعدادات",
+  "socialMediaFolow": "تابعنا على وسائل التواصل الاجتماعي",
+  "privacyPolicyHeader": "في كويك رايدر، نلتزم بحماية خصوصية مستخدمينا بما يتوافق مع أنظمة المملكة العربية السعودية. باستخدام تطبيقنا، فإنك توافق على الشروط الموضحة أدناه.",
+  "profileScreenTitle": "الملف الشخصي",
+  "paymentMethods": "طرق الدفع",
+  "rideHistory": "سجل الرحلات",
+  "language": "اللغة",
+  "helpSupport": "المساعدة والدعم",
+  "faq": "الأسئلة الشائعة",
+  "privacyPolicy": "سياسة الخصوصية",
+  "logout": "تسجيل الخروج",
+  "noNotifications": "الإشعارات",
+  "onBoardingTitleOne": "اطلب رحلة في ثوانٍ",
+  "@onBoardingTitleOne": {
+    "description": "First onboarding title"
+  },
+  "onBoardingDescriptionOne": "اضغط على زر وسيتجه سائق إليك.",
+  "@onBoardingDescriptionOne": {
+    "description": "First onboarding description"
+  },
+  "onBoardingTitleTwo": "تتبع سائقك",
+  "@onBoardingTitleTwo": {
+    "description": "Second onboarding title"
+  },
+  "onBoardingDescriptionTwo": "شاهد موقع سائقك في الوقت الفعلي على الخريطة.",
+  "@onBoardingDescriptionTwo": {
+    "description": "Second onboarding description"
+  },
+  "onBoardingTitleThree": "وصل بأمان",
+  "@onBoardingTitleThree": {
+    "description": "Third onboarding title"
+  },
+  "onBoardingDescriptionThree": "استرخِ واستمتع برحلة سريعة وموثوقة إلى وجهتك.",
+  "@onBoardingDescriptionThree": {
+    "description": "Third onboarding description"
+  },
+  "arriveSafelySaveSmartlyTitle": "وصل بأمان، ووفر بذكاء",
+  "@arriveSafelySaveSmartlyTitle": {
+    "description": "A global title for safety and savings"
+  },
+  "arriveSafelySaveSmartlyDescription": "استمتع براحة البال في كل رحلة مع أسعار شفافة لا ترهق محفظتك.",
+  "@arriveSafelySaveSmartlyDescription": {
+    "description": "A global description for safety and savings"
+  },
+  "homeScreenTitle": "الرئيسية",
+  "userName": "الاسم كاملاً",
+  "phoneNumber": "رقم الهاتف",
+  "otp": "رمز التحقق",
+  "deleteAccount": "حذف الحساب",
+  "notificationsScreenTitle": "الإشعارات",
+  "uploadImageDialogTitle": "رفع صورة الملف الشخصي",
+  "uploadFromCamera": "الكاميرا",
+  "uploadFromGallery": "المعرض",
+  "accountCreated": "تهانينا! حسابك جاهز.",
+  "accountCreatedSub": "أنت جاهز الآن لطلب رحلتك الأولى مع كويك رايدر.",
+  "city": "المدينة",
+  "fave": "الأماكن المحفوظة",
+  "close": "إغلاق",
+  "requestRide": "طلب رحلة",
+  "errorOccurred": "حدث خطأ ما",
+  "uploadFailed": "فشل الرفع",
+  "operationFailed": "تعذر إكمال العملية.",
+  "congrats": "تهانينا!",
+  "rideConfirmed": "رحلتك مؤكدة وسائقك في الطريق!",
+  "enterName": "أدخل اسمك",
+  "phoneNumberValidation": "أدخل رقم هاتف صحيح يبدأ بـ 5",
+  "enterPhoneNumber": "أدخل رقم الهاتف",
+  "home": "الرئيسية",
+  "account": "الحساب",
+  "driveWithUs": "قد معنا",
+  "phoneHintText": "رقم الهاتف (مثال: 5xxxxxxxx)",
+  "@phoneHintText": {
+    "description": "Hint text for phone number input"
+  },
+  "otpHintText": "رمز التحقق (المحاكاة: 123456)",
+  "@otpHintText": {
+    "description": "Hint text for OTP input"
+  },
+  "sendCodeButton": "إرسال الرمز",
+  "@sendCodeButton": {
+    "description": "Text for the 'Send Code' button"
+  },
+  "verifySignInButton": "تحقق وتسجيل الدخول",
+  "@verifySignInButton": {
+    "description": "Text for the 'Verify & Sign In' button"
+  },
+  "verifyingMessage": "جاري التحقق...",
+  "@verifyingMessage": {
+    "description": "Text for 'Verifying...' during OTP submission"
+  },
+  "resend": "إعادة الإرسال",
+  "@resend": {
+    "description": "Text for 'Resend' action"
+  },
+  "resendCodeButton": "إعادة إرسال الرمز",
+  "@resendCodeButton": {
+    "description": "Text for the 'Resend Code' button"
+  },
+  "didNotReceiveCode": "ألم تستلم الرمز؟",
+  "@didNotReceiveCode": {
+    "description": "Text for 'Didn't receive any code?' prompt"
+  },
+  "requestNewCode": "طلب رمز جديد",
+  "@requestNewCode": {
+    "description": "Text for 'Request a new code' in timer"
+  },
+  "resendAgainButton": "إعادة الإرسال مرة أخرى"
 }

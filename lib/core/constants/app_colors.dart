@@ -5,12 +5,14 @@ class AppColors {
   static const primary = Color(0xFF00C9B8);
   static const secondary = Color(0xFF3884FF);
   static const fieldfilled = Color(0xFFF4F5F9);
+  static const card = Color(0xFFF6F8FA);
   // Gradient Colors
   static const gradientDark = Color(0xFF181759);
   static const gradientBlue = Color(0xFF28167C);
   static const gradientPurple = Color(0xFFCA71C7);
   static const gradientPink = Color(0xFFD57CA9);
-
+  // Messages
+  static const error = Color(0xFFD57CA9);
   static const gradientColors = [
     gradientDark,
     gradientBlue,

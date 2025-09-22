@@ -1,9 +1,14 @@
-abstract class Failure {
+import 'package:equatable/equatable.dart';
+
+abstract class Failure extends Equatable {
   final String message;
   final int? code;
   final int? remainingSeconds;
 
   const Failure(this.message, {this.code, this.remainingSeconds});
+
+  @override
+  List<Object?> get props => [message, code, remainingSeconds];
 }
 
 class ServerFailure extends Failure {
@@ -20,4 +25,8 @@ class ValidationFailure extends Failure {
 
 class InvalidCredentialsFailure extends Failure {
   const InvalidCredentialsFailure(super.message);
+}
+
+class NetworkFailure extends Failure {
+  const NetworkFailure(super.message);
 }

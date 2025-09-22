@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:quickrider/features/profile/presentation/screens/profile_screen.dart';
 
 import '../../../features/auth/presentation/screens/auth_screens.dart';
+import '../../../features/profile/presentation/screens/profile_setup_screen.dart';
 import '../../../l10n/app_localizations.dart';
 
 class NavBar extends StatefulWidget {
@@ -14,8 +16,8 @@ class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    AuthScreen(),
-    AuthScreen(),
+    ProfileSetupScreen(),
+    ProfileScreen(),
     AuthScreen(),
   ];
 

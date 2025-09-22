@@ -79,9 +79,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get myRides => 'My Rides';
 
   @override
-  String get privacyPolicy => 'Privacy and Usage Policy';
-
-  @override
   String get settings => 'Settings';
 
   @override
@@ -90,6 +87,33 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get privacyPolicyHeader =>
       'At QuickRider, we are committed to protecting our users\' privacy in compliance with the regulations of the Kingdom of Saudi Arabia. By using our app, you agree to the terms outlined below.';
+
+  @override
+  String get profileScreenTitle => 'Profile';
+
+  @override
+  String get paymentMethods => 'Payment Methods';
+
+  @override
+  String get rideHistory => 'Ride History';
+
+  @override
+  String get language => 'Language';
+
+  @override
+  String get helpSupport => 'Help & Support';
+
+  @override
+  String get faq => 'FAQ';
+
+  @override
+  String get privacyPolicy => 'Privacy Policy';
+
+  @override
+  String get logout => 'Log Out';
+
+  @override
+  String get noNotifications => 'No new notifications';
 
   @override
   String get onBoardingTitleOne => 'Request a Ride in Seconds';
@@ -123,9 +147,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get homeScreenTitle => 'Home';
 
   @override
-  String get profileScreenTitle => 'Profile';
-
-  @override
   String get userName => 'Full Name';
 
   @override
@@ -139,9 +160,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get notificationsScreenTitle => 'Notifications';
-
-  @override
-  String get noNotifications => 'No new notifications';
 
   @override
   String get uploadImageDialogTitle => 'Upload Profile Picture';
@@ -163,13 +181,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get city => 'City';
 
   @override
-  String get language => 'Language';
-
-  @override
   String get fave => 'Saved Places';
-
-  @override
-  String get rideHistory => 'Ride History';
 
   @override
   String get close => 'Close';
