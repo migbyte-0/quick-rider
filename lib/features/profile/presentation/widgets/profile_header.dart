@@ -11,7 +11,7 @@ class ProfileHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double iconContainerSize = 100.r;
+    final double iconContainerSize = 80.r;
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
       child: Row(
