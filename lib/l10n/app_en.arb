@@ -35,6 +35,7 @@
   "privacyPolicy": "Privacy Policy",
   "logout": "Log Out",
   "noNotifications": "No new notifications",
+  "notifications": "notifications",
   "onBoardingTitleOne": "Request a Ride in Seconds",
   "@onBoardingTitleOne": {
     "description": "First onboarding title"

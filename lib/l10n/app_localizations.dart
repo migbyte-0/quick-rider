@@ -308,6 +308,12 @@ abstract class AppLocalizations {
   /// **'No new notifications'**
   String get noNotifications;
 
+  /// No description provided for @notifications.
+  ///
+  /// In en, this message translates to:
+  /// **'notifications'**
+  String get notifications;
+
   /// First onboarding title
   ///
   /// In en, this message translates to:

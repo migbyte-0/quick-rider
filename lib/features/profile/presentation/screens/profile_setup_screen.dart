@@ -30,7 +30,6 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
   void _submitProfile() {
     if (_formKey.currentState!.validate()) {
       context.read<ProfileSetupCubit>().saveProfile(
-        // userId and phoneNumber are now fetched internally by ProfileSetupCubit
         name: _nameController.text.trim(),
         city: _cityController.text.trim(),
       );
@@ -51,8 +50,6 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
       body: BlocListener<ProfileSetupCubit, ProfileSetupState>(
         listener: (context, state) {
           if (state is ProfileSetupSuccess) {
-            // Navigate to the main app screen after successful profile setup
-            // This is where it goes to '/home', which should contain ProfileScreen or a navigator to it.
             Navigator.pushReplacementNamed(context, '/home');
           } else if (state is ProfileSetupFailure) {
             ScaffoldMessenger.of(context).showSnackBar(

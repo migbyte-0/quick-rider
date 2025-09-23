@@ -35,6 +35,7 @@
   "privacyPolicy": "سياسة الخصوصية",
   "logout": "تسجيل الخروج",
   "noNotifications": "الإشعارات",
+  "notifications": "الإشعارات",
   "onBoardingTitleOne": "اطلب رحلة في ثوانٍ",
   "@onBoardingTitleOne": {
     "description": "First onboarding title"

@@ -116,6 +116,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get noNotifications => 'الإشعارات';
 
   @override
+  String get notifications => 'الإشعارات';
+
+  @override
   String get onBoardingTitleOne => 'اطلب رحلة في ثوانٍ';
 
   @override

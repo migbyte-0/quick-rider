@@ -71,8 +71,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         child: Column(
                           children: [
                             ProfileMenuItem(
-                              icon: AppAssets.rideHistory,
-                              text: l10n.rideHistory,
+                              icon: AppAssets.notifications,
+                              text: l10n.notifications,
                               onTap: () {},
                             ),
                             SizedBox(height: 10.h),
@@ -101,7 +101,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                             SizedBox(height: 10.h),
                             ProfileMenuItem(
-                              icon: AppAssets.customerService,
+                              icon: AppAssets.helpSupport,
                               text: l10n.helpSupport,
                               onTap: () {},
                             ),

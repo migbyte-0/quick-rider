@@ -22,7 +22,7 @@ class ProfileMenuItem extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.fieldfilled,
         borderRadius: BorderRadius.circular(12.r),
         border: Border.all(color: Colors.grey.shade200, width: 1),
         boxShadow: [
@@ -48,7 +48,7 @@ class ProfileMenuItem extends StatelessWidget {
                   height: 24.r,
                   width: 24.r,
                   colorFilter: ColorFilter.mode(
-                    color ?? AppColors.primary,
+                    AppColors.primary,
                     BlendMode.srcIn,
                   ),
                 ),

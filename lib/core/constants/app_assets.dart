@@ -25,8 +25,8 @@ class AppAssets {
       '${_basePath}svg/card.svg'; // Icon for payment methods
   static const String language = '${_basePath}svg/language.svg';
   static const String faq = '${_basePath}svg/faq.svg'; // Assuming an FAQ SVG
-  static const String privacyPolicy = '${_basePath}svg/privacy_policy.svg';
-  static const String helpSupport = '${_basePath}svg/customer-service.svg';
+  static const String privacyPolicy = '${_basePath}svg/policy.svg';
+  static const String helpSupport = '${_basePath}svg/help.svg';
   static const String logout = '${_basePath}svg/logout.svg'; // Icon for logout
 
   // Other Icons (SVG)
@@ -36,7 +36,7 @@ class AppAssets {
   static const String customerService =
       '${_basePath}icons/customer-service.svg'; // Keeping old name for help & support
   static const String homeIcon = '${_basePath}icons/home_icon.svg';
-  static const String notificationIcon =
+  static const String notifications =
       '${_basePath}svg/notification.svg'; // Notification icon
 
   // Lottie Animation

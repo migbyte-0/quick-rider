@@ -8,7 +8,6 @@ abstract class ProfileRemoteDataSource {
 class ProfileRemoteDataSourceImpl implements ProfileRemoteDataSource {
   final Map<String, UserEntity> _mockProfiles = {};
 
-  // This constructor (or an injected DioClient)
   ProfileRemoteDataSourceImpl();
 
   @override

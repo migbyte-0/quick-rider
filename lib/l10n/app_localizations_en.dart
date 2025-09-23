@@ -116,6 +116,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get noNotifications => 'No new notifications';
 
   @override
+  String get notifications => 'notifications';
+
+  @override
   String get onBoardingTitleOne => 'Request a Ride in Seconds';
 
   @override
