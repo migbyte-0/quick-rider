@@ -5,7 +5,7 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.9.2
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -33,14 +33,21 @@ dependencies:
   flutter_localization: ^0.3.3
   flutter_otp_text_field: ^1.5.1+1
   markdown: ^7.3.0
+  flutter_markdown: ^0.7.5
+  url_launcher: ^6.2.1
+  flutter_credit_card: ^4.1.0
+  json_annotation: ^4.9.0
+  uuid: ^4.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   intl: ^0.20.2
+  flutter_lints: ^3.0.0
 
-  flutter_lints: ^5.0.0
+  json_serializable: ^6.7.1
+  build_runner: ^2.4.6
 
 flutter:
   uses-material-design: true

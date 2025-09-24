@@ -1,0 +1,11 @@
+{
+  // The name for the barrel file.
+  "name": "index.dart",
+
+  // This is the crucial option. It prevents barrelsby from
+  // recursively searching into subdirectories.
+  "local": true,
+
+  // Use single quotes for the export statements.
+  "singleQuotes": true
+}

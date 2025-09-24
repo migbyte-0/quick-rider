@@ -63,7 +63,7 @@ import 'app_localizations_en.dart';
 /// property.
 abstract class AppLocalizations {
   AppLocalizations(String locale)
-    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -86,16 +86,16 @@ abstract class AppLocalizations {
   /// of delegates is preferred or required.
   static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
       <LocalizationsDelegate<dynamic>>[
-        delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ];
+    delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('ar'),
-    Locale('en'),
+    Locale('en')
   ];
 
   /// No description provided for @appName.
@@ -133,6 +133,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Submit'**
   String get submit;
+
+  /// No description provided for @delete.
+  ///
+  /// In en, this message translates to:
+  /// **'delete'**
+  String get delete;
 
   /// No description provided for @confirm.
   ///
@@ -302,17 +308,179 @@ abstract class AppLocalizations {
   /// **'Log Out'**
   String get logout;
 
+  /// No description provided for @notifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications;
+
   /// No description provided for @noNotifications.
   ///
   /// In en, this message translates to:
   /// **'No new notifications'**
   String get noNotifications;
 
-  /// No description provided for @notifications.
+  /// No description provided for @faqScreenTitle.
   ///
   /// In en, this message translates to:
-  /// **'notifications'**
-  String get notifications;
+  /// **'Frequently Asked Questions'**
+  String get faqScreenTitle;
+
+  /// No description provided for @privacyPolicyScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get privacyPolicyScreenTitle;
+
+  /// No description provided for @failedToLaunchApp.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to launch WhatsApp'**
+  String get failedToLaunchApp;
+
+  /// No description provided for @logoutTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get logoutTitle;
+
+  /// No description provided for @logoutConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to log out?'**
+  String get logoutConfirmation;
+
+  /// No description provided for @faqQuestion1.
+  ///
+  /// In en, this message translates to:
+  /// **'What is QuickRider?'**
+  String get faqQuestion1;
+
+  /// No description provided for @faqAnswer1.
+  ///
+  /// In en, this message translates to:
+  /// **'QuickRider is a ride-hailing app that connects passengers with nearby drivers for convenient and reliable transportation.'**
+  String get faqAnswer1;
+
+  /// No description provided for @faqQuestion2.
+  ///
+  /// In en, this message translates to:
+  /// **'How do I request a ride?'**
+  String get faqQuestion2;
+
+  /// No description provided for @faqAnswer2.
+  ///
+  /// In en, this message translates to:
+  /// **'Simply open the app, enter your destination, select your preferred ride type, and confirm your request. A driver will be assigned to you shortly.'**
+  String get faqAnswer2;
+
+  /// No description provided for @faqQuestion3.
+  ///
+  /// In en, this message translates to:
+  /// **'What payment methods are accepted?'**
+  String get faqQuestion3;
+
+  /// No description provided for @faqAnswer3.
+  ///
+  /// In en, this message translates to:
+  /// **'We accept various payment methods including credit/debit cards and cash. You can add your preferred method in the \'Payment Methods\' section of your profile.'**
+  String get faqAnswer3;
+
+  /// No description provided for @faqQuestion4.
+  ///
+  /// In en, this message translates to:
+  /// **'How can I contact customer support?'**
+  String get faqQuestion4;
+
+  /// No description provided for @faqAnswer4.
+  ///
+  /// In en, this message translates to:
+  /// **'You can reach our customer support through the \'Help & Support\' section in the app, or by emailing us at support@quickrider.com.'**
+  String get faqAnswer4;
+
+  /// No description provided for @privacyPolicyContent.
+  ///
+  /// In en, this message translates to:
+  /// **'# Privacy Policy for QuickRider\n\n**Last Updated:** October 26, 2023\n\nQuickRider is committed to protecting your privacy. This Privacy Policy describes how QuickRider collects, uses, and discloses information, and what choices you have with respect to the information.\n\n## 1. Information We Collect\n\nWe collect information to provide better services to all our users. The types of information we collect include:\n\n* **Personal Information:** Such as your name, email address, phone number, payment information, and profile picture.\n* **Location Information:** We collect precise location data when the app is running in the foreground or background to enable ride services, track progress, and improve pickup/dropoff.\n* **Usage Information:** Details about how you use our services, including ride requests, duration, distance, and interactions with the app.\n* **Device Information:** Information about your mobile device, including the hardware model, operating system, and unique device identifiers.\n\n## 2. How We Use Your Information\n\nWe use the information we collect to:\n\n* Provide, maintain, and improve our services, including facilitating rides, processing payments, and personalizing user experience.\n* Communicate with you about our services, promotions, and updates.\n* Ensure safety and security for all users and comply with legal obligations.\n* Perform internal operations, such as data analysis, testing, and research to improve service quality.\n\n## 3. Information Sharing and Disclosure\n\nWe may share your information:\n\n* **With drivers/passengers:** To facilitate ride services (e.g., driver\'s name, vehicle details, location to passenger).\n* **With service providers:** To perform services on our behalf, such as payment processing, analytics, and customer support.\n* **For legal reasons:** If required by law, regulation, legal process, or governmental request.\n* **With your consent:** We may share your information for other purposes with your explicit consent.\n\n## 4. Your Choices\n\n* **Location Information:** You can enable or disable location services through your device settings.\n* **Push Notifications:** You can opt-out of receiving push notifications through your device settings.\n* **Account Information:** You may update your profile information at any time through the app.\n\n## 5. Data Security\n\nWe implement reasonable security measures to protect your information from unauthorized access, alteration, disclosure, or destruction.\n\n## 6. Changes to This Policy\n\nWe may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the \'Last Updated\' date.\n\n## 7. Contact Us\n\nIf you have any questions about this Privacy Policy, please contact us at support@quickrider.com.'**
+  String get privacyPolicyContent;
+
+  /// No description provided for @cardAddedSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Card added successfully!'**
+  String get cardAddedSuccess;
+
+  /// No description provided for @cardNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Card Number'**
+  String get cardNumber;
+
+  /// No description provided for @expiryDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Expiry Date'**
+  String get expiryDate;
+
+  /// No description provided for @cvvCode.
+  ///
+  /// In en, this message translates to:
+  /// **'CVV'**
+  String get cvvCode;
+
+  /// No description provided for @cardHolder.
+  ///
+  /// In en, this message translates to:
+  /// **'Card Holder'**
+  String get cardHolder;
+
+  /// No description provided for @verifyingMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Verifying...'**
+  String get verifyingMessage;
+
+  /// No description provided for @addCard.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Card'**
+  String get addCard;
+
+  /// No description provided for @cash.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash'**
+  String get cash;
+
+  /// No description provided for @defaultLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Default'**
+  String get defaultLabel;
+
+  /// No description provided for @setAsDefault.
+  ///
+  /// In en, this message translates to:
+  /// **'Set as Default'**
+  String get setAsDefault;
+
+  /// No description provided for @deleteCardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Card'**
+  String get deleteCardTitle;
+
+  /// No description provided for @deleteCardConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete the card ending in {lastFourDigits}?'**
+  String deleteCardConfirmation(String lastFourDigits);
+
+  /// No description provided for @cannotLaunchWhatsapp.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not launch WhatsApp. Please ensure it is installed.'**
+  String get cannotLaunchWhatsapp;
 
   /// First onboarding title
   ///
@@ -542,12 +710,6 @@ abstract class AppLocalizations {
   /// **'Verify & Sign In'**
   String get verifySignInButton;
 
-  /// Text for 'Verifying...' during OTP submission
-  ///
-  /// In en, this message translates to:
-  /// **'Verifying...'**
-  String get verifyingMessage;
-
   /// Prefix for resend timer
   ///
   /// In en, this message translates to:
@@ -606,9 +768,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
   }
 
   throw FlutterError(
-    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-    'an issue with the localizations generation tool. Please file an issue '
-    'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.',
-  );
+      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
 }

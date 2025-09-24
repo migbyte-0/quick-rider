@@ -78,7 +78,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         if (state is AuthLoading && state.isSendingOtp) {
                           return SizedBox(
                             height: MediaQuery.of(context).size.height,
-                            child: Center(child: AppLoading()),
+                            child: const Center(child: AppLoading()),
                           );
                         }
 
@@ -119,8 +119,9 @@ class _AuthScreenState extends State<AuthScreen> {
                                             if (_formKey.currentState!
                                                 .validate()) {
                                               context.read<AuthCubit>().sendOtp(
-                                                _phoneController.text.trim(),
-                                              );
+                                                    _phoneController.text
+                                                        .trim(),
+                                                  );
                                             }
                                           },
                                           text: l10n.sendCodeButton,

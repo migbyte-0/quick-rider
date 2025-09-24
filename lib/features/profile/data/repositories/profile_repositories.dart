@@ -6,6 +6,9 @@ import '../../../auth/domain/entities/user_entites.dart';
 import '../../domain/repository/profile_repository.dart';
 import '../datasources/profile_datasources.dart';
 
+import 'package:dartz/dartz.dart';
+import 'package:quickrider/core/errors/exceptions.dart';
+
 class ProfileRepositoryImpl implements ProfileRepository {
   final ProfileRemoteDataSource remoteDataSource;
   final ProfileLocalDataSource localDataSource;
@@ -16,23 +19,35 @@ class ProfileRepositoryImpl implements ProfileRepository {
   });
 
   @override
-  Future<void> saveUserProfile(UserEntity user) async {
+  Future<Either<Failure, Unit>> saveUserProfile(UserEntity user) async {
     try {
       final userModel = UserModel.fromEntity(user);
       await remoteDataSource.saveProfile(userModel);
       await localDataSource.cacheUserId(user.id);
+      return const Right(unit);
+    } on ServerException catch (e) {
+      return Left(ServerFailure(e.message));
+    } on CacheException catch (e) {
+      return Left(CacheFailure(e.message));
     } catch (e) {
-      throw ServerFailure('Failed to save profile: ${e.toString()}');
+      return Left(
+          ServerFailure('An unexpected error occurred: ${e.toString()}'));
     }
   }
 
   @override
-  Future<UserEntity?> getCurrentUserProfile(String userId) async {
+  Future<Either<Failure, UserEntity>> getCurrentUserProfile(
+      String userId) async {
     try {
       final userModel = await remoteDataSource.getProfile(userId);
-      return userModel;
+      return Right(userModel);
+    } on ServerException catch (e) {
+      return Left(ServerFailure(e.message));
+    } on CacheException catch (e) {
+      return Left(CacheFailure(e.message));
     } catch (e) {
-      throw ServerFailure('Failed to fetch profile: ${e.toString()}');
+      return Left(
+          ServerFailure('An unexpected error occurred: ${e.toString()}'));
     }
   }
 }

@@ -27,6 +27,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get submit => 'إرسال';
 
   @override
+  String get delete => 'حذف';
+
+  @override
   String get confirm => 'تأكيد';
 
   @override
@@ -113,10 +116,98 @@ class AppLocalizationsAr extends AppLocalizations {
   String get logout => 'تسجيل الخروج';
 
   @override
-  String get noNotifications => 'الإشعارات';
+  String get notifications => 'الإشعارات';
 
   @override
-  String get notifications => 'الإشعارات';
+  String get noNotifications => 'لا توجد إشعارات جديدة';
+
+  @override
+  String get faqScreenTitle => 'الأسئلة المتكررة';
+
+  @override
+  String get privacyPolicyScreenTitle => 'سياسة الخصوصية';
+
+  @override
+  String get failedToLaunchApp => 'فشل في فتح واتساب';
+
+  @override
+  String get logoutTitle => 'تسجيل الخروج';
+
+  @override
+  String get logoutConfirmation => 'هل أنت متأكد أنك تريد تسجيل الخروج؟';
+
+  @override
+  String get faqQuestion1 => 'ما هو كويك رايدر؟';
+
+  @override
+  String get faqAnswer1 =>
+      'كويك رايدر هو تطبيق لطلب الرحلات يربط الركاب بالسائقين القريبين لتوفير وسائل نقل مريحة وموثوقة.';
+
+  @override
+  String get faqQuestion2 => 'كيف أطلب رحلة؟';
+
+  @override
+  String get faqAnswer2 =>
+      'ما عليك سوى فتح التطبيق، إدخال وجهتك، اختيار نوع الرحلة المفضل لديك، وتأكيد طلبك. سيتم تخصيص سائق لك قريبًا.';
+
+  @override
+  String get faqQuestion3 => 'ما هي طرق الدفع المقبولة؟';
+
+  @override
+  String get faqAnswer3 =>
+      'نحن نقبل طرق دفع مختلفة بما في ذلك بطاقات الائتمان/الخصم والدفع النقدي. يمكنك إضافة طريقتك المفضلة في قسم \'طرق الدفع\' بملفك الشخصي.';
+
+  @override
+  String get faqQuestion4 => 'كيف يمكنني التواصل مع خدمة العملاء؟';
+
+  @override
+  String get faqAnswer4 =>
+      'يمكنك الوصول إلى دعم العملاء لدينا من خلال قسم \'المساعدة والدعم\' في التطبيق، أو عن طريق مراسلتنا عبر البريد الإلكتروني على support@quickrider.com.';
+
+  @override
+  String get privacyPolicyContent =>
+      '# سياسة الخصوصية لكويك رايدر\n\n**تاريخ التحديث الأخير:** 26 أكتوبر 2023\n\nتلتزم كويك رايدر بحماية خصوصيتك. تصف سياسة الخصوصية هذه كيفية قيام كويك رايدر بجمع المعلومات واستخدامها والكشف عنها، وما هي الخيارات المتاحة لك فيما يتعلق بالمعلومات.\n\n## 1. المعلومات التي نجمعها\n\nنحن نجمع المعلومات لتقديم خدمات أفضل لجميع مستخدمينا. تتضمن أنواع المعلومات التي نجمعها ما يلي:\n\n* **المعلومات الشخصية:** مثل اسمك، عنوان بريدك الإلكتروني، رقم هاتفك، معلومات الدفع، وصورة ملفك الشخصي.\n* **معلومات الموقع:** نقوم بجمع بيانات الموقع الدقيقة عندما يكون التطبيق يعمل في المقدمة أو الخلفية لتمكين خدمات الرحلات، وتتبع التقدم، وتحسين أماكن الالتقاط/الإنزال.\n* **معلومات الاستخدام:** تفاصيل حول كيفية استخدامك لخدماتنا، بما في ذلك طلبات الرحلات، المدة، المسافة، والتفاعلات مع التطبيق.\n* **معلومات الجهاز:** معلومات حول جهازك المحمول، بما في ذلك طراز الجهاز، نظام التشغيل، ومعرفات الجهاز الفريدة.\n\n## 2. كيف نستخدم معلوماتك\n\nنستخدم المعلومات التي نجمعها من أجل:\n\n* تقديم خدماتنا وصيانتها وتحسينها، بما في ذلك تسهيل الرحلات، معالجة المدفوعات، وتخصيص تجربة المستخدم.\n* التواصل معك بشأن خدماتنا وعروضنا وتحديثاتنا.\n* ضمان السلامة والأمان لجميع المستخدمين والامتثال للالتزامات القانونية.\n* إجراء العمليات الداخلية، مثل تحليل البيانات، والاختبار، والبحث لتحسين جودة الخدمة.\n\n## 3. مشاركة المعلومات والكشف عنها\n\nقد نشارك معلوماتك:\n\n* **مع السائقين/الركاب:** لتسهيل خدمات الرحلات مثل اسم السائق، تفاصيل المركبة، الموقع للراكب.\n* **مع مقدمي الخدمات:** لأداء الخدمات نيابة عنا، مثل معالجة المدفوعات، والتحليلات، ودعم العملاء.\n* **لأسباب قانونية:** إذا كان ذلك مطلوبًا بموجب القانون، أو اللوائح، أو الإجراءات القانونية، أو طلب حكومي.\n* **بموافقتك:** قد نشارك معلوماتك لأغراض أخرى بموافقتك الصريحة.\n\n## 4. خياراتك\n\n* **معلومات الموقع:** يمكنك تمكين أو تعطيل خدمات الموقع من خلال إعدادات جهازك.\n* **إشعارات الدفع:** يمكنك إلغاء الاشتراك في تلقي إشعارات الدفع من خلال إعدادات جهازك.\n* **معلومات الحساب:** يمكنك تحديث معلومات ملفك الشخصي في أي وقت من خلال التطبيق.\n\n## 5. أمن البيانات\n\nنحن نطبق تدابير أمنية معقولة لحماية معلوماتك من الوصول غير المصرح به، أو التغيير، أو الكشف، أو التدمير.\n\n## 6. تغييرات على هذه السياسة\n\nقد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات عن طريق نشر السياسة الجديدة على هذه الصفحة وتحديث تاريخ \'آخر تحديث\'.\n\n## 7. اتصل بنا\n\nإذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا على support@quickrider.com.';
+
+  @override
+  String get cardAddedSuccess => 'تمت إضافة البطاقة بنجاح!';
+
+  @override
+  String get cardNumber => 'رقم البطاقة';
+
+  @override
+  String get expiryDate => 'تاريخ الانتهاء';
+
+  @override
+  String get cvvCode => 'رمز CVV';
+
+  @override
+  String get cardHolder => 'اسم حامل البطاقة';
+
+  @override
+  String get verifyingMessage => 'جاري التحقق...';
+
+  @override
+  String get addCard => 'إضافة بطاقة';
+
+  @override
+  String get cash => 'نقداً';
+
+  @override
+  String get defaultLabel => 'افتراضي';
+
+  @override
+  String get setAsDefault => 'تعيين كافتراضي';
+
+  @override
+  String get deleteCardTitle => 'حذف البطاقة';
+
+  @override
+  String deleteCardConfirmation(String lastFourDigits) {
+    return 'هل أنت متأكد أنك تريد حذف البطاقة المنتهية بـ $lastFourDigits؟';
+  }
+
+  @override
+  String get cannotLaunchWhatsapp => 'تعذر فتح واتساب. يرجى التأكد من تثبيته.';
 
   @override
   String get onBoardingTitleOne => 'اطلب رحلة في ثوانٍ';
@@ -235,9 +326,6 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get verifySignInButton => 'تحقق وتسجيل الدخول';
-
-  @override
-  String get verifyingMessage => 'جاري التحقق...';
 
   @override
   String get resend => 'إعادة الإرسال';

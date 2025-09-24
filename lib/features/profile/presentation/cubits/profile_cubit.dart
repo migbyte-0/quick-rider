@@ -15,10 +15,10 @@ class ProfileCubit extends Cubit<ProfileState> {
     required GetProfileUseCase getProfileUseCase,
     required ProfileLocalDataSource localDataSource,
     required AppLogger logger,
-  }) : _getProfileUseCase = getProfileUseCase,
-       _localDataSource = localDataSource,
-       _logger = logger,
-       super(ProfileInitial());
+  })  : _getProfileUseCase = getProfileUseCase,
+        _localDataSource = localDataSource,
+        _logger = logger,
+        super(ProfileInitial());
 
   Future<void> fetchProfile() async {
     _logger.i('ProfileCubit: Fetching profile...');

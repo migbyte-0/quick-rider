@@ -47,7 +47,7 @@ class ProfileMenuItem extends StatelessWidget {
                   icon,
                   height: 24.r,
                   width: 24.r,
-                  colorFilter: ColorFilter.mode(
+                  colorFilter: const ColorFilter.mode(
                     AppColors.primary,
                     BlendMode.srcIn,
                   ),

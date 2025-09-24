@@ -12,7 +12,8 @@ class AppColors {
   static const gradientPurple = Color(0xFFCA71C7);
   static const gradientPink = Color(0xFFD57CA9);
   // Messages
-  static const error = Color(0xFFD57CA9);
+  static const error = Color(0xFFFF1744);
+
   static const gradientColors = [
     gradientDark,
     gradientBlue,

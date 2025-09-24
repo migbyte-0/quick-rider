@@ -5,64 +5,47 @@ import 'package:quickrider/features/auth/data/datasources/auth_datasources.dart'
 import 'package:quickrider/features/auth/domain/repository/auth_repository.dart';
 import 'package:quickrider/features/auth/presentation/cubits/auth_cubit.dart';
 import 'package:quickrider/features/onboarding/presentation/cubit/onboarding_cubit.dart';
+import 'package:quickrider/features/payment/domain/usecases/set_default_credit_card_usecase.dart'
+    show SetDefaultCreditCardUseCase;
 
 // --- Core & Services ---
 import '../../features/auth/data/repositories_impl/auth_repositories_impl.dart';
-import '../../features/auth/domain/usecases/auth_usecases.dart';
-import '../../features/profile/data/datasources/profile_datasources.dart';
-import '../../features/profile/data/repositories/profile_repositories.dart';
+import '../../features/auth/domain/usecases/auth_usecases.dart'; // SendOtp, VerifyOtp
+import '../../features/payment/data/datasources/payment_remote_data_source.dart';
+import '../../features/payment/data/datasources/payment_remote_datasouce_impl.dart';
+import '../../features/payment/data/repositories/payment_repository_impl.dart';
+import '../../features/payment/domain/repository/payment_repository.dart';
+import '../../features/payment/domain/usecases/get_credit_cards_usecase.dart';
+import '../../features/payment/domain/usecases/remove_credit_card_usecase.dart';
+import '../../features/payment/domain/usecases/save_credit_card_usecase.dart';
+import '../../features/payment/presentation/cubits/payment_cubit.dart';
+import '../../features/profile/data/datasources/profile_datasource_impl.dart';
+import '../../features/profile/data/datasources/profile_datasources.dart'; // ProfileRemoteDataSource
+import '../../features/profile/data/repositories/profile_repositories.dart'; // ProfileRepositoryImpl
 import '../../features/profile/domain/repository/profile_repository.dart';
-import '../../features/profile/presentation/presentation_exports.dart';
+import '../../features/profile/presentation/presentation_exports.dart'; // ProfileSetupCubit, ProfileCubit
 import '../../services/logger_services.dart';
 import '../../services/onboarding_services.dart';
 import '../network/dio_client.dart';
 import '../services/secure_storage.dart';
+import '../language/cubit/language_cubit.dart'; // Import LanguageCubit
 
 // --- Splash Feature ---
 import '../../features/splash/presentation/cubit/splash_cubit.dart';
 
-import 'package:shared_preferences/shared_preferences.dart'; // Import SharedPreferences
-
-// --- Core & Services ---
-
-// --- Splash Feature ---
-
 // --- Profile Feature ---
 import '../../features/profile/data/datasources/profile_local_data_source.dart';
 import '../../features/profile/domain/usecases/save_profile_usecase.dart';
+import '../../features/profile/domain/usecases/get_profile_usecase.dart';
 
-// Keep this import here
-
-// --- Core & Services ---
-
-// --- Auth Feature Imports ---
-import '../../features/auth/data/datasources/auth_datasources.dart';
-// Assuming SendOtp and VerifyOtp are here
-
-// --- Onboarding Feature Imports ---
-
-// --- Splash Feature Imports ---
-
-// --- Profile Feature Imports ---
-import '../../features/profile/domain/usecases/get_profile_usecase.dart'; // NEW: For ProfileCubit
-// NEW: The actual ProfileCubit
-
-// --- Core & Services ---
-
-// --- Auth Feature Imports ---
-// Assuming SendOtp and VerifyOtp are here
-
-// --- Onboarding Feature Imports ---
-
-// --- Splash Feature Imports ---
-
-// --- Profile Feature Imports ---
+// --- External Dependencies ---
+import 'package:shared_preferences/shared_preferences.dart';
 
 final sl = GetIt.instance;
 
 Future<void> init() async {
   // --- Core & Services ---
-  sl.registerLazySingleton(() => AppLogger()); // Logger is registered
+  sl.registerLazySingleton(() => AppLogger());
   sl.registerLazySingleton(() => Dio());
   sl.registerLazySingleton<SecureStorage>(() => const SecureStorage());
   sl.registerLazySingleton(
@@ -73,7 +56,6 @@ Future<void> init() async {
   );
 
   // --- External Dependencies ---
-  // Ensure SharedPreferences is initialized before anything tries to use it.
   final sharedPreferences = await SharedPreferences.getInstance();
   sl.registerLazySingleton(() => sharedPreferences);
 
@@ -89,7 +71,7 @@ Future<void> init() async {
       sendOtp: sl(),
       verifyOtp: sl(),
       secureStorage: sl(),
-      localDataSource: sl(), // ProfileLocalDataSource injected here
+      localDataSource: sl(),
       logger: sl(),
     ),
   );
@@ -103,10 +85,12 @@ Future<void> init() async {
   sl.registerFactory(
     () => ProfileCubit(
       getProfileUseCase: sl(),
-      localDataSource: sl(), // ProfileLocalDataSource injected here
+      localDataSource: sl(),
       logger: sl(),
     ),
   );
+  // Register LanguageCubit
+  sl.registerFactory(() => LanguageCubit());
 
   // -- Auth Feature Dependencies --
   sl.registerLazySingleton(() => SendOtp(sl()));
@@ -128,9 +112,25 @@ Future<void> init() async {
     () => ProfileRemoteDataSourceImpl(),
   );
   sl.registerLazySingleton<ProfileLocalDataSource>(
-    () => ProfileLocalDataSourceImpl(
-      sharedPreferences: sl(),
-      logger: sl(),
-    ), // <<< Inject logger
+    () => ProfileLocalDataSourceImpl(sharedPreferences: sl(), logger: sl()),
+  );
+  // Payments cubit
+  sl.registerFactory(() => PaymentCubit(
+      removeCreditCardUseCase: sl(),
+      setDefaultCreditCardUseCase: sl(),
+      getCreditCardsUseCase: sl(),
+      saveCreditCardUseCase: sl(),
+      logger: sl()));
+
+  // -- Payment Feature Dependencies --
+  sl.registerLazySingleton(() => SaveCreditCardUseCase(sl()));
+  sl.registerLazySingleton(() => RemoveCreditCardUseCase(sl()));
+  sl.registerLazySingleton(() => SetDefaultCreditCardUseCase(sl()));
+  sl.registerLazySingleton(() => GetCreditCardsUseCase(sl()));
+  sl.registerLazySingleton<PaymentRepository>(
+    () => PaymentRepositoryImpl(remoteDataSource: sl()),
+  );
+  sl.registerLazySingleton<PaymentRemoteDataSource>(
+    () => PaymentRemoteDataSourceImpl(logger: sl()),
   );
 }
