@@ -11,6 +11,16 @@ import 'package:quickrider/features/payment/domain/usecases/set_default_credit_c
 // --- Core & Services ---
 import '../../features/auth/data/repositories_impl/auth_repositories_impl.dart';
 import '../../features/auth/domain/usecases/auth_usecases.dart'; // SendOtp, VerifyOtp
+import '../../features/map/data/datasources/map_remote_data_source.dart';
+import '../../features/map/data/datasources/map_remote_datasource_impl.dart';
+import '../../features/map/data/repositories_impl/map_repositories_impl.dart'
+    show MapRepositoryImpl;
+import '../../features/map/domain/domain_exports.dart';
+import '../../features/map/domain/usecases/get_available_car_types.dart'
+    show GetAvailableCarTypesUseCase;
+import '../../features/map/domain/usecases/listen_to_trip_updates.dart';
+import '../../features/map/domain/usecases/request_trip.dart';
+import '../../features/map/presentation/presentation_exports.dart';
 import '../../features/payment/data/datasources/payment_remote_data_source.dart';
 import '../../features/payment/data/datasources/payment_remote_datasouce_impl.dart';
 import '../../features/payment/data/repositories/payment_repository_impl.dart';
@@ -41,12 +51,24 @@ import '../../features/profile/domain/usecases/get_profile_usecase.dart';
 // --- External Dependencies ---
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:http/http.dart' as http; // <--- Import http client
+
+// lib/core/di/di.dart
+
+import 'package:location/location.dart';
+import 'package:connectivity_plus/connectivity_plus.dart'; // <--- NEW IMPORT
+
+// --- Core & Services ---
+import '../network/network_info.dart'; // <--- Ensure NetworkInfo abstract class is imported
+// ... other imports for features (auth, map, payment, profile, splash)
+
 final sl = GetIt.instance;
 
 Future<void> init() async {
   // --- Core & Services ---
   sl.registerLazySingleton(() => AppLogger());
   sl.registerLazySingleton(() => Dio());
+  sl.registerLazySingleton<http.Client>(() => http.Client());
   sl.registerLazySingleton<SecureStorage>(() => const SecureStorage());
   sl.registerLazySingleton(
     () => DioClient(dio: sl(), log: sl(), storage: sl()),
@@ -58,6 +80,20 @@ Future<void> init() async {
   // --- External Dependencies ---
   final sharedPreferences = await SharedPreferences.getInstance();
   sl.registerLazySingleton(() => sharedPreferences);
+
+  // Register Connectivity_plus
+  sl.registerLazySingleton(() => Connectivity()); // <--- REGISTER CONNECTIVITY
+
+  // Register NetworkInfoImpl
+  sl.registerLazySingleton<NetworkInfo>(
+    () => NetworkInfoImpl(
+      sl(), // Provides Connectivity instance
+      logger: sl(), // Provides AppLogger instance
+    ),
+  );
+
+  // Register the Location service from the 'location' package
+  sl.registerLazySingleton(() => Location());
 
   // --- Features ---
 
@@ -89,8 +125,22 @@ Future<void> init() async {
       logger: sl(),
     ),
   );
-  // Register LanguageCubit
   sl.registerFactory(() => LanguageCubit());
+  sl.registerFactory(() => PaymentCubit(
+      removeCreditCardUseCase: sl(),
+      setDefaultCreditCardUseCase: sl(),
+      getCreditCardsUseCase: sl(),
+      saveCreditCardUseCase: sl(),
+      logger: sl()));
+
+  sl.registerFactory(() => MapsCubit(
+        searchPlacesUseCase: sl(),
+        getNearbyDriversUseCase: sl(),
+        getAvailableCarTypesUseCase: sl(),
+        requestTripUseCase: sl(),
+        listenToTripUpdatesUseCase: sl(),
+        logger: sl(),
+      ));
 
   // -- Auth Feature Dependencies --
   sl.registerLazySingleton(() => SendOtp(sl()));
@@ -114,13 +164,6 @@ Future<void> init() async {
   sl.registerLazySingleton<ProfileLocalDataSource>(
     () => ProfileLocalDataSourceImpl(sharedPreferences: sl(), logger: sl()),
   );
-  // Payments cubit
-  sl.registerFactory(() => PaymentCubit(
-      removeCreditCardUseCase: sl(),
-      setDefaultCreditCardUseCase: sl(),
-      getCreditCardsUseCase: sl(),
-      saveCreditCardUseCase: sl(),
-      logger: sl()));
 
   // -- Payment Feature Dependencies --
   sl.registerLazySingleton(() => SaveCreditCardUseCase(sl()));
@@ -132,5 +175,31 @@ Future<void> init() async {
   );
   sl.registerLazySingleton<PaymentRemoteDataSource>(
     () => PaymentRemoteDataSourceImpl(logger: sl()),
+  );
+
+  // --- Map Feature Dependencies ---
+  // Use Cases
+  sl.registerLazySingleton(() => SearchPlacesUseCase(sl()));
+  sl.registerLazySingleton(() => GetNearbyDriversUseCase(sl()));
+  sl.registerLazySingleton(() => GetAvailableCarTypesUseCase(sl()));
+  sl.registerLazySingleton(() => RequestTripUseCase(sl()));
+  sl.registerLazySingleton(() => ListenToTripUpdatesUseCase(sl()));
+
+  // Repository
+  sl.registerLazySingleton<MapRepository>(
+    () => MapRepositoryImpl(
+      remoteDataSource: sl(),
+      networkInfo: sl(), // <--- Correctly provided
+      logger: sl(),
+    ),
+  );
+
+  // Data sources
+  sl.registerLazySingleton<MapRemoteDataSource>(
+    () => MapRemoteDataSourceImpl(
+      client: sl(),
+      locationService: sl<Location>(),
+      logger: sl(),
+    ),
   );
 }

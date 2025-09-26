@@ -82,6 +82,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get myRides => 'رحلاتي';
 
   @override
+  String get history => 'history';
+
+  @override
   String get settings => 'الإعدادات';
 
   @override
@@ -120,6 +123,12 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get noNotifications => 'لا توجد إشعارات جديدة';
+
+  @override
+  String get mapError => 'تعذر تحميل الخريطة';
+
+  @override
+  String get retry => 'إعادة المحاولة';
 
   @override
   String get faqScreenTitle => 'الأسئلة المتكررة';

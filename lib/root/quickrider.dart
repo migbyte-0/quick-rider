@@ -8,6 +8,7 @@ import 'package:quickrider/features/profile/presentation/presentation_exports.da
 import 'package:quickrider/l10n/app_localizations.dart';
 import '../core/constants/constant_exports.dart';
 import '../features/auth/presentation/cubits/auth_cubit.dart';
+import '../features/map/presentation/presentation_exports.dart';
 import '../features/onboarding/presentation/cubit/onboarding_cubit.dart';
 import '../features/splash/presentation/cubit/splash_cubit.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -22,6 +23,7 @@ class QuickRider extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
+        BlocProvider(create: (_) => sl<MapsCubit>()),
         BlocProvider<AuthCubit>(create: (_) => sl<AuthCubit>()),
         BlocProvider<OnboardingCubit>(create: (_) => sl<OnboardingCubit>()),
         BlocProvider<SplashCubit>(create: (_) => sl<SplashCubit>()),

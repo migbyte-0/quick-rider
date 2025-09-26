@@ -30,3 +30,16 @@ class InvalidCredentialsFailure extends Failure {
 class NetworkFailure extends Failure {
   const NetworkFailure(super.message);
 }
+
+class UnknownFailure extends Failure {
+  const UnknownFailure(super.message);
+}
+
+class NoInternetFailure extends Failure {
+  const NoInternetFailure({String message = 'No Internet Connection'})
+      : super(message);
+}
+
+class LocationFailure extends Failure {
+  const LocationFailure(super.message);
+}

@@ -242,6 +242,12 @@ abstract class AppLocalizations {
   /// **'My Rides'**
   String get myRides;
 
+  /// No description provided for @history.
+  ///
+  /// In en, this message translates to:
+  /// **'history'**
+  String get history;
+
   /// No description provided for @settings.
   ///
   /// In en, this message translates to:
@@ -319,6 +325,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No new notifications'**
   String get noNotifications;
+
+  /// No description provided for @mapError.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load map'**
+  String get mapError;
+
+  /// No description provided for @retry.
+  ///
+  /// In en, this message translates to:
+  /// **'retry'**
+  String get retry;
 
   /// No description provided for @faqScreenTitle.
   ///

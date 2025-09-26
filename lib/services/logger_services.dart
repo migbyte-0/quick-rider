@@ -4,16 +4,16 @@ class AppLogger {
   final Logger _logger;
 
   AppLogger()
-    : _logger = Logger(
-        printer: PrettyPrinter(
-          methodCount: 0,
-          errorMethodCount: 5,
-          lineLength: 100,
-          colors: true,
-          printEmojis: true,
-          dateTimeFormat: DateTimeFormat.none,
-        ),
-      );
+      : _logger = Logger(
+          printer: PrettyPrinter(
+            methodCount: 0,
+            errorMethodCount: 5,
+            lineLength: 100,
+            colors: true,
+            printEmojis: true,
+            dateTimeFormat: DateTimeFormat.none,
+          ),
+        );
 
   /// Log a debug message (for detailed developer-only logs).
   void d(dynamic message, {Object? error, StackTrace? stackTrace}) {

@@ -82,6 +82,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get myRides => 'My Rides';
 
   @override
+  String get history => 'history';
+
+  @override
   String get settings => 'Settings';
 
   @override
@@ -120,6 +123,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noNotifications => 'No new notifications';
+
+  @override
+  String get mapError => 'Failed to load map';
+
+  @override
+  String get retry => 'retry';
 
   @override
   String get faqScreenTitle => 'Frequently Asked Questions';

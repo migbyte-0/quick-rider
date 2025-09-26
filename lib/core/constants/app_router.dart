@@ -3,9 +3,9 @@ import 'package:quickrider/features/legal/presentation/screens/faq_screen.dart';
 import 'package:quickrider/features/legal/presentation/screens/privacy_policy_screen.dart';
 import 'package:quickrider/features/payment/presentation/presentation_exports.dart';
 import 'package:quickrider/features/splash/presentation/screens/splash_screen.dart';
+import 'package:quickrider/main_screen.dart';
 import '../../features/auth/presentation/screens/auth_screens.dart';
 import '../../features/onboarding/presentation/sceens/onboarding_screen.dart';
-import '../shared/widgets/custom_navbar.dart';
 
 class AppRouter {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
@@ -17,7 +17,7 @@ class AppRouter {
       case '/login':
         return MaterialPageRoute(builder: (_) => const AuthScreen());
       case '/home':
-        return MaterialPageRoute(builder: (_) => const NavBar());
+        return MaterialPageRoute(builder: (_) => const MainScreen());
       case '/faq':
         return MaterialPageRoute(builder: (_) => const FaqScreen());
       case '/policy':
